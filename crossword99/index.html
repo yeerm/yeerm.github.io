@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -11,28 +18,70 @@
   </head>
   <body>
     <div id="wrap">
-      <header><h1>Crossword99</h1></header>
+      <header>
+        <h1 class="mont">Crossword99</h1>
+        <p>2022.01 김예림, 옥진경</p>
+      </header>
       <main>
         <div id="hint_wrap">
-          <h2 id="puzzle_title"></h2>
+          <select id="puzzle_list">
+            <option selected>Thema를 선택하세요.</option>
+            <option class="puzzle_item">
+              <p></p>
+              <p class="puzzle_title">animals</p>
+              <p></p>
+            </option>
+          </select>
           <div id="hint">
-            <div id="across"><h3>Across</h3></div>
-            <div id="down"><h3>Down</h3></div>
+            <div id="across">
+              <h3 class="hint-tit mont">Across</h3>
+              <ol id="across_hint">
+                <li class="across hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+                <li class="across hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+                <li class="across hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+                <li class="across hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+                <li class="across hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+              </ol>
+            </div>
+            <div id="down">
+              <h3 class="hint-tit mont">Down</h3>
+              <ol id="down_hint">
+                <li class="down hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+                <li class="down hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+                <li class="down hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+                <li class="down hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+                <li class="down hint_item">
+                  <span class="hint_num">1</span>4륜 우마차를 이르는 말
+                </li>
+              </ol>
+            </div>
           </div>
-          <form action="" method="get">
-            <label for="answer">answer:</label>
-            <input id="answer" type="text" />
-          </form>
         </div>
         <div id="puzzle_wrap">
           <div id="puzzle"></div>
-          <ol id="puzzle_list">
-            <li class="puzzle_item">animals</li>
-          </ol>
-          <div id="btn_register">Register new puzzle</div>
         </div>
       </main>
-      <footer></footer>
+      <div id="btn_wrap">
+        <div id="btn_register" class="btn mont">Register new puzzle</div>
+      </div>
     </div>
   </body>
 </html>

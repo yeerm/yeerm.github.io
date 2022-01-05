@@ -4,8 +4,14 @@
   box-sizing: border-box;
 }
 
-input {
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+input,
+select {
   border-style: none;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 h1,
@@ -15,4 +21,14 @@ h4,
 h5,
 h6 {
   display: block;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
