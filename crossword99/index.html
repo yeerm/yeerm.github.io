@@ -4,12 +4,35 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- css -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>crossword99</title>
   </head>
   <body>
     <div id="wrap">
-      <h1>Crossword99</h1>
-      <div></div>
+      <header><h1>Crossword99</h1></header>
+      <main>
+        <div id="hint_wrap">
+          <h2 id="puzzle_title"></h2>
+          <div id="hint">
+            <div id="across"><h3>Across</h3></div>
+            <div id="down"><h3>Down</h3></div>
+          </div>
+          <form action="" method="get">
+            <label for="answer">answer:</label>
+            <input id="answer" type="text" />
+          </form>
+        </div>
+        <div id="puzzle_wrap">
+          <div id="puzzle"></div>
+          <ol id="puzzle_list">
+            <li class="puzzle_item">animals</li>
+          </ol>
+          <div id="btn_register">Register new puzzle</div>
+        </div>
+      </main>
+      <footer></footer>
     </div>
   </body>
 </html>
