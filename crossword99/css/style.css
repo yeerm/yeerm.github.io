@@ -41,6 +41,7 @@ header {
   color: #ffffff;
   background-color: #237fbd;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 /* MAIN PAGE */
@@ -65,16 +66,50 @@ main {
 #puzzle_list_wrap {
   position: relative;
   width: 100%;
-  height: 45px;
+  height: 40px;
   margin-bottom: 19px;
-  border-radius: 4px;
-  background-color: #ffffff;
-  border: solid 1px #237fbd;
 }
 
 #puzzle_select,
 #puzzle_list {
   position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#puzzle_select {
+  opacity: 0;
+}
+
+#puzzle_list {
+  padding-left: 38px;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 40px;
+  text-transform: capitalize;
+}
+
+#puzzle_list::before {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #237fbd;
+}
+
+#puzzle_list::after {
+  display: block;
+  content: "▼";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #237fbd;
+  font-size: 16px;
 }
 
 #across,
@@ -86,14 +121,14 @@ main {
   margin-bottom: 35px;
 }
 
-.hint-tit {
+.hint_tit {
   margin-bottom: 10px;
   margin-left: 28px;
   line-height: 25px;
   text-transform: uppercase;
 }
 
-.hint-tit::before {
+.hint_tit::before {
   display: block;
   content: "";
   position: absolute;
@@ -104,12 +139,12 @@ main {
   background-color: #237fbd;
 }
 
-#across > .hint-tit::before {
+#across > .hint_tit::before {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-#down > .hint-tit::before {
+#down > .hint_tit::before {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -160,7 +195,6 @@ option {
   margin: 0 0 19px 38px;
   font-size: 28px;
   font-weight: 700;
-  border-radius: 4px;
   text-transform: capitalize;
 }
 
@@ -172,5 +206,5 @@ option {
   left: -38px;
   width: 20px;
   height: 20px;
-  border: 1px solid #237fbd;
+  background-color: #237fbd;
 }

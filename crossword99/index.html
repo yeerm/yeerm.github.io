@@ -14,6 +14,13 @@
     <!-- css -->
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- js -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/index.js"></script>
     <title>crossword99</title>
   </head>
   <body>
@@ -25,6 +32,9 @@
       <main>
         <div id="hint_wrap">
           <div id="puzzle_list_wrap">
+            <label id="puzzle_list" class="mont" for="puzzle_select"
+              >Thema</label
+            >
             <select id="puzzle_select">
               <option selected>Thema를 선택하세요.</option>
               <option class="puzzle_item">
@@ -33,12 +43,11 @@
                 <p></p>
               </option>
             </select>
-            <div id="puzzle_list"></div>
           </div>
 
           <div id="hint">
             <div id="across">
-              <h3 class="hint-tit mont">Across</h3>
+              <h3 class="hint_tit mont">Across</h3>
               <ol id="across_hint">
                 <li class="across hint_item">
                   <span class="hint_num">1</span>4륜 우마차를 이르는 말
@@ -58,7 +67,7 @@
               </ol>
             </div>
             <div id="down">
-              <h3 class="hint-tit mont">Down</h3>
+              <h3 class="hint_tit mont">Down</h3>
               <ol id="down_hint">
                 <li class="down hint_item">
                   <span class="hint_num">1</span>4륜 우마차를 이르는 말
@@ -84,7 +93,13 @@
         </div>
       </main>
       <div class="btn_wrap">
-        <div id="btn_new" class="btn mont">Register new puzzle</div>
+        <div
+          id="btn_new"
+          class="btn mont"
+          onclick="location.href='pages/make.html'"
+        >
+          Register new puzzle
+        </div>
       </div>
     </div>
   </body>
