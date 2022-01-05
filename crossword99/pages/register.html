@@ -12,8 +12,8 @@
       rel="stylesheet"
     />
     <!-- css -->
-    <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <title>crossword99</title>
   </head>
   <body>
@@ -24,18 +24,9 @@
       </header>
       <main>
         <div id="hint_wrap">
-          <div id="puzzle_list_wrap">
-            <select id="puzzle_select">
-              <option selected>Thema를 선택하세요.</option>
-              <option class="puzzle_item">
-                <p></p>
-                <p class="puzzle_title">animals</p>
-                <p></p>
-              </option>
-            </select>
-            <div id="puzzle_list"></div>
+          <div id="puzzle_title" class="mont">
+            <p>animals</p>
           </div>
-
           <div id="hint">
             <div id="across">
               <h3 class="hint-tit mont">Across</h3>
@@ -84,7 +75,7 @@
         </div>
       </main>
       <div class="btn_wrap">
-        <div id="btn_new" class="btn mont">Register new puzzle</div>
+        <div id="btn_register" class="btn mont">Register</div>
       </div>
     </div>
   </body>
