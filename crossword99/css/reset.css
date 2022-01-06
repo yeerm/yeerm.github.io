@@ -9,7 +9,8 @@ body {
 }
 
 input,
-select {
+select,
+button {
   border-style: none;
   font-family: "Noto Sans KR", sans-serif;
 }

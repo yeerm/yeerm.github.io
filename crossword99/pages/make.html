@@ -23,39 +23,116 @@
         <p>2022.01 김예림, 옥진경</p>
       </header>
       <main id="make_main">
-        <div>
-          <label>Title:</label>
-          <input />
-        </div>
-        <div>
-          <div></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-          <div><input class="word" /><input class="desc" /></div>
-        </div>
+        <form action="" method="get">
+          <label for="make_title" id="make_label"
+            >Title: <input id="make_title"
+          /></label>
+          <div id="subtitle_wrap">
+            <p class="word">Word</p>
+            <p class="desc">Description</p>
+          </div>
+          <ol id="new_puzzle">
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="7"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+            <li class="puzzle_item">
+              <input
+                class="word"
+                minlength="3"
+                maxlength="9"
+                placeholder="영문 3~7글자 이내"
+              /><input class="desc" maxlength="24" placeholder="24자 내 입력" />
+            </li>
+          </ol>
+        </form>
+        <p>※ 등록하는 단어는 5~10개로 한다. 단어의 길이는 3~9자로 한다.</p>
       </main>
       <div id="make" class="btn_wrap">
-        <div
+        <button
           id="btn_main"
           class="btn mont"
+          type="button"
           onclick="location.href='../index.html'"
         >
           Main
-        </div>
-        <div
+        </button>
+        <button
           id="btn_make"
           class="btn mont"
+          type="submit"
           onclick="location.href='register.html'"
         >
           Make puzzle
-        </div>
+        </button>
       </div>
     </div>
   </body>
