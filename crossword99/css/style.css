@@ -327,8 +327,21 @@ li.puzzle_item {
   opacity: 0;
 } */
 
+.anwser {
+  background-color: #d7efff;
+  font-size: 35px;
+  font-weight: 800;
+  line-height: 60px;
+  text-align: center;
+  text-transform: capitalize;
+}
+
 input.text {
   background-color: #d7efff;
+}
+
+input.first {
+  opacity: 0;
 }
 
 input:disabled {
