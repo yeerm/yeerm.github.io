@@ -1,0 +1,36 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+input,
+select,
+button {
+  border-style: none;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+}
+
+ul,
+li,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}

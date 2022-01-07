@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.company.mapper.CrossWordMapper">
+  
+  
+  <resultMap type="HashMap" id="TitleResultMap">
+  	<id column="tno" property="tno"></id>
+  	<id column="tname" property="tname"></id>
+  	<id column="cnt" property="cnt"></id>
+  </resultMap>
+  <!-- 메인페이지 -->
+  <!-- 메인페이지 -->
+  <!-- 메인페이지 -->
+  
+  <!-- 주제가져오기 -->
+  <select id="searchTitle" resultType="TitleDto">
+  	select * from title;
+  </select>
+  
+  
+  <!--  주제번호 + 주제 + 주제별 낱말개수 -->
+  <!-- <select id="searchTitle" resultMap="TitleResultMap">
+  	select a.tno 
+  	, a.tname
+  	, count(b.word) as cnt 
+  	from title a join word b
+  	using (tno)
+  	where a.tno = #{tno}
+  </select> -->
+  
+  <!-- 주제 방향별로 퍼즐 정보 가져오기  -->
+  <select id="searchTitle_info" resultType="WordDto">
+  	select *
+  	from word
+  	where tno = #{tno};
+  </select>
+  
+  
+  <!-- 			 -->
+  <!-- 			 -->
+  <!-- 			 -->
+  <!-- 			 -->
+  
+  <!--  -->
+  <!--  -->
+  <!--  -->
+  
+  <select id="selectWord" resultType="WordDto">
+  	select * from word;
+  </select>
+  </mapper>
