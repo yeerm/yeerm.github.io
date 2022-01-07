@@ -27,18 +27,15 @@ function first () {
   var firstX = coordinate_arr[0].charAt(0);
   var firstY = coordinate_arr[0].charAt(1);
 
-  $(".row:nth-child("+firstX+") >.col:nth-child("+firstY+")").addClass("first");
-  $(".row:nth-child("+firstX+") >.col:nth-child("+firstY+").first::before").css({
-      content:"hint_num" 
-    });
-  
+  $(".row:nth-child("+firstX+") >.col:nth-child("+firstY+")").parents(".col").addClass("first");
+
   //방향 row 임시 설정
   var direction = "row"
   // row col 일때 퍼즐의 첫글자에 표시 적용
   if(direction == "row"){
-    first.addClass("across")
+    $(".first").addClass("across")
   }else if(direction == "col"){
-    first.addClass("down")
+    $(".first").addClass("down")
   }
   
 }
@@ -80,9 +77,4 @@ $(document).ready(function(){
     console.log(i);
   });
 
-
-  
-
-  coordinate(1,1);
-  
 });
