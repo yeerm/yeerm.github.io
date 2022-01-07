@@ -15,6 +15,15 @@ button {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+input:focus,
+input:active,
+select:focus,
+select:active,
+button:focus,
+button:active {
+  outline: none;
+}
+
 h1,
 h2,
 h3,
