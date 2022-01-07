@@ -27,12 +27,6 @@ public class CrossWordServiceImpl implements CrossWordService{
 
 	@Override
 	public List<WordDto> searchTitle_info(int tno) {
-		//좌표를 기준으로  가로힌트인지 세로힌트인지 판별
-	
-		
-		//가로일 경우 -> (0,0) (1,0) (2,0) 시작좌표부터 마지막좌표까지 x가 계속 커짐
-		//세로일 경우 -> (0,0),(0,1),(0,2) 시작좌표로부터 마지막좌표까지 y가 계속 커짐
-		
 		
 		return crosswordMapper.searchTitle_info(tno);
 	}

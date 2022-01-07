@@ -156,6 +156,7 @@ option {
 
 #across_hint,
 #down_hint {
+  height: 175px;
   background-color: #ffffffd2;
   /* padding: 10px 0; */
 }
@@ -221,16 +222,89 @@ option {
 
 /* MAKE PAGE */
 #make_main {
+  width: 100%;
   flex-direction: column;
 }
 
+form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 26px;
+}
+
+#make_main > p {
+  margin-left: 41px;
+  color: #666666;
+}
+
+#make_main input {
+  height: 35px;
+}
+
+#make_label {
+  display: block;
+  margin: 0 0 20px -26px;
+}
+
+#make_title {
+  width: 250px;
+  margin-left: 15px;
+}
+
+#new_puzzle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  margin-bottom: 7px;
+}
+
+#subtitle_wrap {
+  margin-bottom: 7px;
+}
+
+#subtitle_wrap p {
+  display: inline-block;
+  margin-left: 15px;
+  text-align: center;
+}
+
+#subtitle_wrap p.word {
+  width: 250px;
+}
+
+#subtitle_wrap p.desc {
+  width: 686px;
+}
+
+li.puzzle_item {
+  list-style-type: decimal;
+}
+
+.puzzle_item > input {
+  margin-left: 15px;
+}
+
+.puzzle_item > .word {
+  width: 250px;
+}
+
+.puzzle_item > .desc {
+  width: 664px;
+}
+
 /* make page - btn */
+
 #btn_main {
   margin-right: 30px;
   color: #237fbd;
   background-color: #ffffff;
 }
 
+/* REGISTER PAGE */
 #puzzle_title {
   position: relative;
   margin: 0 0 19px 38px;
@@ -247,5 +321,26 @@ option {
   left: -38px;
   width: 20px;
   height: 20px;
+  background-color: #237fbd;
+}
+
+/* input {
+  opacity: 0;
+} */
+
+input.text {
+  background-color: #d7efff;
+}
+
+input:disabled {
+  background-color: #ffffff;
+}
+
+input.text.down::before {
+  display: block;
+  position: absolute;
+  content: "1";
+  width: 15px;
+  height: 15px;
   background-color: #237fbd;
 }

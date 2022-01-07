@@ -30,13 +30,14 @@ public class CrossController {
 	}
 	
 	///메인페이지에서 주제별로 글자 힌트 가져오기 
-	@RequestMapping(value="/across",method= {RequestMethod.POST})
+	@RequestMapping(value="/across", produces="application/json",method= {RequestMethod.GET})
 	@ResponseBody
 	public List<WordDto> description_across(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		
 		int tno = Integer.parseInt(request.getParameter("tno"));
+		System.out.println("tno확인...............: "+tno);
 		
 		return crosswordService.searchTitle_info(tno);
 	}
