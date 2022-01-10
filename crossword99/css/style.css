@@ -227,6 +227,22 @@ input.text {
   border: 1px solid #237fbd;
 }
 
+input.focus {
+  animation: focus 1s;
+}
+
+@keyframes focus {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* input  */
 .text {
   position: absolute;

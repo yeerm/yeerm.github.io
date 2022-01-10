@@ -60,29 +60,8 @@ function first () {
   }
 }
 
-function choise(a,b){
-  $("li.hint_item").click(function(){
-    var firstX = a+1;
-    var firstY = b+1;
-    var rowFocus = firstY +1;
-    var colFocus = firstX +1;
-  
-    // list 선택시 초기화
-    $(".row >.col > input").removeClass("focus");
-
-
-    if(direction == "row"){
-      $(".row:nth-child("+firstX+") >.col:nth-child("+rowFocus+") > input").focus().addClass("focus");
-    }else if(direction == "col"){
-      $(".row:nth-child("+colFocus+") >.col:nth-child("+firstY+") > input").focus().addClass("focus");
-    }
-
-  });
-}
-
 
 $(document).ready(function(){
-
   var gridsize = 9
   //
   for(var i = 1; i<=gridsize; i++){
@@ -93,40 +72,11 @@ $(document).ready(function(){
 
   for(var j =1; j<=gridsize; j++){
     $(".row").append(
-      '<div class="col"><div class="answer"></div><input class="text" type="text" maxlength="1" /></div>'
+      '<div class="col"><div class="answer"></div></div>'
     );
   }
 
-  $("#puzzle_select").change(function(){
-    var selected = $("#puzzle_select option:selected").text();
-    $("#puzzle_list").html(selected)
-  });
-
-  // row number 적용
-  $("#puzzle_wrap > .row").each(function(index){
-    $(this).attr("row-number",index);
-  });
-
-  // input에 text 입력 후 정답과 비교
-  $(".text").bind().change(function(){
-    var anwser = $(this).prev().text();
-    console.log(anwser);
-    
-    var text = $(this).val();
-    console.log(text);
-
-     if(text == anwser){
-      $(this).removeClass("wrong");
-      $(this).addClass("correct")
-     }else if(text != anwser){
-      $(this).removeClass("correct")
-      $(this).addClass("wrong");      
-     }
-  });
-
-  $(".answer").next().attr("disabled", true);
-  coordinate();
+  coordinate()
   first ();
-  
-});
 
+})
