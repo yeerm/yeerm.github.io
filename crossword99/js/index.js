@@ -6,19 +6,13 @@ function coordinate() {
   for (var i =0; i<word_arr.length; i++){
     // 각 알파벳 좌표값
 
-    console.log(x);
-    console.log(y);
-    console.log(word_arr[i])
-
-    
-    
     var direction ="row"
     if(direction == "row"){
       var x = startx +1
       var y = starty +1 +i
       $(".row:nth-child("+x+") >.col:nth-child("+y+") > .answer").html(word_arr[i]);
       $(".row:nth-child("+x+") >.col:nth-child("+y+") > .answer").next().removeAttr("disabled")
-      $(".first").addClass("across")
+      $(".first").addClass("across");
 
     }else if(direction == "col"){
       var x = startx +1 +i
@@ -79,7 +73,6 @@ function choise(a,b){
 
   });
 }
-
 
 $(document).ready(function(){
 
